@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Product"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Discription": {
+      "type": "richtext",
+      "required": true
+    },
+    "Unit": {
+      "type": "decimal"
+    },
+    "Quantity": {
+      "type": "integer",
+      "required": true
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "product"
+    }
+  }
+}
